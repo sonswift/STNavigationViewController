@@ -8,17 +8,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: STViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+  internal var navigationBar: NavigationBar!
+
+  override func commonInit() {
+    super.commonInit()
+    self.contentView.backgroundColor = UIColor.white
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    self.setupNavigation()
+  }
+
+  override func getPushAnimatedTransitioning(from fromVC: UIViewController,
+                                             to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
+    return PushAnimator()
+  }
+
+  override func getPopAnimatedTransitioning(from fromVC: UIViewController,
+                                            to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
+    return PopAnimator()
+  }
+
+  override func getPopInteractionAnimatedTransitioning(from fromVC: UIViewController,
+                                                       to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
+    return PopAnimator()
+  }
+
+  private func setupNavigation() {
+    guard let navigationController = UIApplication.shared.delegate?.window!?.rootViewController as? UINavigationController else {
+      return
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    self.navigationBar.backBtn.isHidden = navigationController.viewControllers.count < 2
+  }
 }
-

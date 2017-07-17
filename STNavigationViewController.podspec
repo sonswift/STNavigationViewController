@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'STNavigationViewController'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of STNavigationViewController.'
+  s.version          = '0.0.1'
+  s.summary          = 'A UINavigationController's subclass in order to make animated transition for pushing or poping new controller.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+STNavigationController is a subclass of UINavigationController.
+Allow to custom animation when pushing or poping new UIViewController.
+Easy to use/create new one Animator.
                        DESC
 
   s.homepage         = 'https://github.com/son11592/STNavigationViewController'
@@ -26,7 +28,7 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'son11592' => 'hoangson11592@gmail.com' }
   s.source           = { :git => 'https://github.com/son11592/STNavigationViewController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+   s.social_media_url = 'https://twitter.com/hoangson11592'
 
   s.ios.deployment_target = '8.0'
 

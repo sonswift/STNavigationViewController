@@ -1,0 +1,6 @@
+framework module Pods_STNavigationViewController_Tests {
+  umbrella header "Pods-STNavigationViewController_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
