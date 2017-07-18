@@ -21,15 +21,15 @@ open class STNavigationViewController: UINavigationController {
   private var leftGesture: UIPanGestureRecognizer?
 
   // MARK: - Initiation
-  public required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
 
-  override init(rootViewController: UIViewController) {
+  override public init(rootViewController: UIViewController) {
     super.init(rootViewController: rootViewController)
   }
 
-  override init(nibName: String?, bundle: Bundle?) {
+  override public init(nibName: String?, bundle: Bundle?) {
     super.init(nibName: nibName, bundle: bundle)
     self.commonInit()
   }
@@ -60,7 +60,7 @@ open class STNavigationViewController: UINavigationController {
     }
   }
 
-  internal func commonInit() {
+  open func commonInit() {
     self.delegate = self
     self.transitioningDelegate = self
     self.navigationBar.isHidden = true
