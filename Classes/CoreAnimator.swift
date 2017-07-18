@@ -48,7 +48,7 @@ class PopAnimator: Animator {
   var duration: TimeInterval = 0.23
 
   override func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
-    return Animator.transitionDuration
+    return self.duration
   }
 
   override func attackSubviews(from fromVC: STViewController,
