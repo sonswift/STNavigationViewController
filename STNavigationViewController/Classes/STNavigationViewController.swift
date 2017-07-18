@@ -34,7 +34,7 @@ open class STNavigationViewController: UINavigationController {
     self.commonInit()
   }
 
-  override public func pushViewController(_ viewController: UIViewController, animated: Bool) {
+  override open func pushViewController(_ viewController: UIViewController, animated: Bool) {
     isPushingViewController = true
     super.pushViewController(viewController, animated: animated)
   }
