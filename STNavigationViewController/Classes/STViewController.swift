@@ -20,7 +20,7 @@ import UIKit
 
 open class STViewController: UIViewController {
 
-  internal let contentView = UIView()
+  open let contentView = UIView()
 
   convenience init() {
     self.init(nibName: nil, bundle: nil)
@@ -47,7 +47,7 @@ open class STViewController: UIViewController {
     super.viewWillAppear(animated)
   }
 
-  internal func commonInit() {
+  open func commonInit() {
     self.automaticallyAdjustsScrollViewInsets = false
     self.contentView.frame = self.view.bounds
     self.contentView.backgroundColor = UIColor.white
