@@ -126,9 +126,9 @@ open class STNavigationViewController: UINavigationController {
 
 extension STNavigationViewController: UINavigationControllerDelegate {
   public func navigationController(_ navigationController: UINavigationController,
-                            animationControllerFor operation: UINavigationControllerOperation,
-                            from fromVC: UIViewController,
-                            to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+                                   animationControllerFor operation: UINavigationControllerOperation,
+                                   from fromVC: UIViewController,
+                                   to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     guard interactionController == nil else {
       return (fromVC as? STViewController)?.getPopInteractionAnimatedTransitioning(from: fromVC, to: toVC)
     }
@@ -142,13 +142,13 @@ extension STNavigationViewController: UINavigationControllerDelegate {
   }
 
   public func navigationController(_ navigationController: UINavigationController,
-                            didShow viewController: UIViewController,
-                            animated: Bool) {
+                                   didShow viewController: UIViewController,
+                                   animated: Bool) {
     isPushingViewController = false
   }
 
   public func navigationController(_ navigationController: UINavigationController,
-                            interactionControllerFor animationController: UIViewControllerAnimatedTransitioning)
+                                   interactionControllerFor animationController: UIViewControllerAnimatedTransitioning)
     -> UIViewControllerInteractiveTransitioning? {
       return interactionController
   }
@@ -157,8 +157,8 @@ extension STNavigationViewController: UINavigationControllerDelegate {
 extension STNavigationViewController: UIViewControllerTransitioningDelegate {
 
   public func animationController(forPresented presented: UIViewController,
-                           presenting: UIViewController,
-                           source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+                                  presenting: UIViewController,
+                                  source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     return (source as? STViewController)?.getPushAnimatedTransitioning(from: source, to: presenting)
   }
 
@@ -177,8 +177,8 @@ extension STNavigationViewController: UIViewControllerTransitioningDelegate {
   }
 
   public func presentationController(forPresented presented: UIViewController,
-                              presenting: UIViewController?,
-                              source: UIViewController) -> UIPresentationController? {
+                                     presenting: UIViewController?,
+                                     source: UIViewController) -> UIPresentationController? {
     return PresentationController(presentedViewController: presented, presenting: presenting)
   }
 

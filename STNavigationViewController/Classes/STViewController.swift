@@ -10,11 +10,11 @@ import UIKit
 
 public protocol ViewControllerAnimatedTransitioningProtocol {
   func getPushAnimatedTransitioning(from fromVC: UIViewController,
-                                           to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning
+                                    to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning
   func getPopAnimatedTransitioning(from fromVC: UIViewController,
-                                          to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning
+                                   to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning
   func getPopInteractionAnimatedTransitioning(from fromVC: UIViewController,
-                                                     to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning
+                                              to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning
   func pushInteractionController()
 }
 
@@ -58,20 +58,20 @@ open class STViewController: UIViewController {
 
 extension STViewController: ViewControllerAnimatedTransitioningProtocol {
   open func getPushAnimatedTransitioning(from fromVC: UIViewController,
-                                           to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
+                                         to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
     return PushAnimator()
   }
 
   open func getPopAnimatedTransitioning(from fromVC: UIViewController,
-                                          to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
+                                        to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
     return PopAnimator()
   }
 
   open func getPopInteractionAnimatedTransitioning(from fromVC: UIViewController,
-                                                     to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
+                                                   to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
     return InteractionPopAnimator()
   }
-  
+
   open func pushInteractionController() {
   }
 }

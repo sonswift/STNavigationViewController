@@ -41,20 +41,20 @@ open class Animator: NSObject, UIViewControllerAnimatedTransitioning {
   }
 
   open func attackSubviews(from fromVC: STViewController,
-                               to toVC: STViewController,
-                               withContext context: UIViewControllerContextTransitioning) {
+                           to toVC: STViewController,
+                           withContext context: UIViewControllerContextTransitioning) {
     context.containerView.addSubview(toVC.view)
   }
 
   open func prepareForTransition(from fromVC: STViewController,
-                                     to toVC: STViewController,
-                                     withContext context: UIViewControllerContextTransitioning) {}
+                                 to toVC: STViewController,
+                                 withContext context: UIViewControllerContextTransitioning) {}
 
   open func animatedTransition(from fromVC: STViewController,
-                                   to toVC: STViewController,
-                                   withContext context: UIViewControllerContextTransitioning) {}
+                               to toVC: STViewController,
+                               withContext context: UIViewControllerContextTransitioning) {}
 
   open func completion(from fromVC: STViewController,
-                           to toVC: STViewController,
-                           withContext context: UIViewControllerContextTransitioning) {}
+                       to toVC: STViewController,
+                       withContext context: UIViewControllerContextTransitioning) {}
 }
