@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'STNavigationViewController'
   s.version          = '0.0.1'
-  s.summary          = 'A UINavigationController's subclass in order to make animated transition for pushing or poping new controller.'
+  s.summary          = 'A UINavigationController\'s subclass in order to make animated transition for pushing or poping new controller.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
