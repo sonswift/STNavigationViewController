@@ -22,7 +22,7 @@ open class STViewController: UIViewController {
 
   open let contentView = UIView()
 
-  convenience init() {
+  convenience public init() {
     self.init(nibName: nil, bundle: nil)
   }
 
@@ -30,7 +30,7 @@ open class STViewController: UIViewController {
     super.init(coder: aDecoder)
   }
 
-  override init(nibName: String?, bundle: Bundle?) {
+  override public init(nibName: String?, bundle: Bundle?) {
     super.init(nibName: nibName, bundle: bundle)
     self.commonInit()
   }
