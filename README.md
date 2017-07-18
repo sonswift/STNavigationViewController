@@ -1,6 +1,5 @@
 # STNavigationViewController
 
-[![CI Status](http://img.shields.io/travis/son11592/STNavigationViewController.svg?style=flat)](https://travis-ci.org/son11592/STNavigationViewController)
 [![Version](https://img.shields.io/cocoapods/v/STNavigationViewController.svg?style=flat)](http://cocoapods.org/pods/STNavigationViewController)
 [![License](https://img.shields.io/cocoapods/l/STNavigationViewController.svg?style=flat)](http://cocoapods.org/pods/STNavigationViewController)
 [![Platform](https://img.shields.io/cocoapods/p/STNavigationViewController.svg?style=flat)](http://cocoapods.org/pods/STNavigationViewController)
