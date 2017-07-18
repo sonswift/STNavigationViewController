@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/STNavigationViewController.svg?style=flat)](http://cocoapods.org/pods/STNavigationViewController)
 [![License](https://img.shields.io/cocoapods/l/STNavigationViewController.svg?style=flat)](http://cocoapods.org/pods/STNavigationViewController)
 [![Platform](https://img.shields.io/cocoapods/p/STNavigationViewController.svg?style=flat)](http://cocoapods.org/pods/STNavigationViewController)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/sonacle/0.99)
 
 ## Example
 
