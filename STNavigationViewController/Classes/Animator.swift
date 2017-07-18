@@ -8,23 +8,23 @@
 
 import UIKit
 
-class Animator: NSObject, UIViewControllerAnimatedTransitioning {
+open class Animator: NSObject, UIViewControllerAnimatedTransitioning {
 
-  static let transitionDuration: TimeInterval = 0.23
+  open static let transitionDuration: TimeInterval = 0.23
 
-  internal func getMinimumAlpha(using context: UIViewControllerContextTransitioning?) -> CGFloat {
+  open func getMinimumAlpha(using context: UIViewControllerContextTransitioning?) -> CGFloat {
     return 0.3
   }
 
-  internal func getMaximumAlpha(using context: UIViewControllerContextTransitioning?) -> CGFloat {
+  open func getMaximumAlpha(using context: UIViewControllerContextTransitioning?) -> CGFloat {
     return 1.0
   }
 
-  internal func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
+  open func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
     return 0
   }
 
-  internal func animateTransition(using context: UIViewControllerContextTransitioning) {
+  open func animateTransition(using context: UIViewControllerContextTransitioning) {
     guard let fromVC = context.viewController(forKey: .from) as? STViewController,
       let toVC = context.viewController(forKey: .to) as? STViewController else {
         return
@@ -40,21 +40,21 @@ class Animator: NSObject, UIViewControllerAnimatedTransitioning {
     }
   }
 
-  internal func attackSubviews(from fromVC: STViewController,
+  open func attackSubviews(from fromVC: STViewController,
                                to toVC: STViewController,
                                withContext context: UIViewControllerContextTransitioning) {
     context.containerView.addSubview(toVC.view)
   }
 
-  internal func prepareForTransition(from fromVC: STViewController,
+  open func prepareForTransition(from fromVC: STViewController,
                                      to toVC: STViewController,
                                      withContext context: UIViewControllerContextTransitioning) {}
 
-  internal func animatedTransition(from fromVC: STViewController,
+  open func animatedTransition(from fromVC: STViewController,
                                    to toVC: STViewController,
                                    withContext context: UIViewControllerContextTransitioning) {}
 
-  internal func completion(from fromVC: STViewController,
+  open func completion(from fromVC: STViewController,
                            to toVC: STViewController,
                            withContext context: UIViewControllerContextTransitioning) {}
 }

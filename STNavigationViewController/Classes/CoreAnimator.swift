@@ -8,23 +8,23 @@
 
 import UIKit
 
-class PushAnimator: Animator {
+open class PushAnimator: Animator {
 
   var duration: TimeInterval = 0.23
 
-  override func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
+  override open func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
     return self.duration
   }
 
-  override func attackSubviews(from fromVC: STViewController,
-                               to toVC: STViewController,
-                               withContext context: UIViewControllerContextTransitioning) {
+  override open func attackSubviews(from fromVC: STViewController,
+                                    to toVC: STViewController,
+                                    withContext context: UIViewControllerContextTransitioning) {
     context.containerView.addSubview(toVC.view)
   }
 
-  override func prepareForTransition(from fromVC: STViewController,
-                                     to toVC: STViewController,
-                                     withContext context: UIViewControllerContextTransitioning) {
+  override open func prepareForTransition(from fromVC: STViewController,
+                                          to toVC: STViewController,
+                                          withContext context: UIViewControllerContextTransitioning) {
     toVC.view.frame.origin.x = UIScreen.main.bounds.width
     toVC.contentView.alpha = self.getMinimumAlpha(using: context)
 
@@ -32,9 +32,9 @@ class PushAnimator: Animator {
     fromVC.contentView.alpha = 1.0
   }
 
-  override func animatedTransition(from fromVC: STViewController,
-                                   to toVC: STViewController,
-                                   withContext context: UIViewControllerContextTransitioning) {
+  override open func animatedTransition(from fromVC: STViewController,
+                                        to toVC: STViewController,
+                                        withContext context: UIViewControllerContextTransitioning) {
     fromVC.view.frame.origin.x = -UIScreen.main.bounds.width
     fromVC.contentView.alpha = self.getMinimumAlpha(using: context)
 
@@ -43,30 +43,30 @@ class PushAnimator: Animator {
   }
 }
 
-class PopAnimator: Animator {
+open class PopAnimator: Animator {
 
-  var duration: TimeInterval = 0.23
+  open var duration: TimeInterval = 0.23
 
-  override func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
+  override open func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
     return self.duration
   }
 
-  override func attackSubviews(from fromVC: STViewController,
-                               to toVC: STViewController,
-                               withContext context: UIViewControllerContextTransitioning) {
+  override open func attackSubviews(from fromVC: STViewController,
+                                    to toVC: STViewController,
+                                    withContext context: UIViewControllerContextTransitioning) {
     context.containerView.insertSubview(toVC.view, belowSubview: fromVC.view)
   }
 
-  override func prepareForTransition(from fromVC: STViewController,
-                                     to toVC: STViewController,
-                                     withContext context: UIViewControllerContextTransitioning) {
+  override open func prepareForTransition(from fromVC: STViewController,
+                                          to toVC: STViewController,
+                                          withContext context: UIViewControllerContextTransitioning) {
     toVC.view.frame.origin.x = -UIScreen.main.bounds.width
     toVC.contentView.alpha = self.getMinimumAlpha(using: context)
   }
 
-  override func animatedTransition(from fromVC: STViewController,
-                                   to toVC: STViewController,
-                                   withContext context: UIViewControllerContextTransitioning) {
+  override open func animatedTransition(from fromVC: STViewController,
+                                        to toVC: STViewController,
+                                        withContext context: UIViewControllerContextTransitioning) {
     toVC.view.frame.origin.x = 0
     toVC.contentView.alpha = self.getMaximumAlpha(using: context)
 
@@ -74,11 +74,11 @@ class PopAnimator: Animator {
     fromVC.contentView.alpha = self.getMinimumAlpha(using: context)
   }
 
-  override func completion(from fromVC: STViewController,
-                           to toVC: STViewController,
-                           withContext context: UIViewControllerContextTransitioning) {}
+  override open func completion(from fromVC: STViewController,
+                                to toVC: STViewController,
+                                withContext context: UIViewControllerContextTransitioning) {}
 }
 
-class InteractionPopAnimator: PopAnimator {
+open class InteractionPopAnimator: PopAnimator {
   // Custom animation if need a different interaction for pop pan gesture.
 }

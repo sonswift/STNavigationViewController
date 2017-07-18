@@ -18,7 +18,7 @@ import UIKit
   func pushInteractionController()
 }
 
-class STViewController: UIViewController {
+open class STViewController: UIViewController {
 
   internal let contentView = UIView()
 
@@ -26,7 +26,7 @@ class STViewController: UIViewController {
     self.init(nibName: nil, bundle: nil)
   }
 
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
 
@@ -35,15 +35,15 @@ class STViewController: UIViewController {
     self.commonInit()
   }
 
-  override func didReceiveMemoryWarning() {
+  override open func didReceiveMemoryWarning() {
     print("Got memory warning!!!")
   }
 
-  override func loadView() {
+  override open func loadView() {
     super.loadView()
   }
 
-  override func viewWillAppear(_ animated: Bool) {
+  override open func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
   }
 

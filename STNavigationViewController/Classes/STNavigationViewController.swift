@@ -8,20 +8,20 @@
 
 import UIKit
 
-class STNavigationViewController: UINavigationController {
+open class STNavigationViewController: UINavigationController {
 
   // MARK: - Static properites
-  static var isPanGestureEnabling = false
+  open static var isPanGestureEnabling = false
 
   // MARK: - Internal properties
-  internal var isPushInteractionEnabled = false
+  open var isPushInteractionEnabled = false
 
   // MARK: - Private properties
   fileprivate var isPushingViewController = false
   private var leftGesture: UIPanGestureRecognizer?
 
   // MARK: - Initiation
-  required init?(coder aDecoder: NSCoder) {
+  public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
 
@@ -34,12 +34,12 @@ class STNavigationViewController: UINavigationController {
     self.commonInit()
   }
 
-  override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+  override open func pushViewController(_ viewController: UIViewController, animated: Bool) {
     isPushingViewController = true
     super.pushViewController(viewController, animated: animated)
   }
 
-  override func viewDidLoad() {
+  override open func viewDidLoad() {
     super.viewDidLoad()
 
     let left = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeFromLeft(_:)))
@@ -125,7 +125,7 @@ class STNavigationViewController: UINavigationController {
 }
 
 extension STNavigationViewController: UINavigationControllerDelegate {
-  func navigationController(_ navigationController: UINavigationController,
+  public func navigationController(_ navigationController: UINavigationController,
                             animationControllerFor operation: UINavigationControllerOperation,
                             from fromVC: UIViewController,
                             to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -141,13 +141,13 @@ extension STNavigationViewController: UINavigationControllerDelegate {
     return nil
   }
 
-  func navigationController(_ navigationController: UINavigationController,
+  public func navigationController(_ navigationController: UINavigationController,
                             didShow viewController: UIViewController,
                             animated: Bool) {
     isPushingViewController = false
   }
 
-  func navigationController(_ navigationController: UINavigationController,
+  public func navigationController(_ navigationController: UINavigationController,
                             interactionControllerFor animationController: UIViewControllerAnimatedTransitioning)
     -> UIViewControllerInteractiveTransitioning? {
       return interactionController
@@ -156,27 +156,27 @@ extension STNavigationViewController: UINavigationControllerDelegate {
 
 extension STNavigationViewController: UIViewControllerTransitioningDelegate {
 
-  func animationController(forPresented presented: UIViewController,
+  public func animationController(forPresented presented: UIViewController,
                            presenting: UIViewController,
                            source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     return (source as? STViewController)?.getPushAnimatedTransitioning(from: source, to: presenting)
   }
 
-  func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+  public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     return (dismissed as? STViewController)?.getPopAnimatedTransitioning(from: STViewController(), to: dismissed)
   }
 
-  func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning)
+  public func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning)
     -> UIViewControllerInteractiveTransitioning? {
       return interactionController
   }
 
-  func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning)
+  public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning)
     -> UIViewControllerInteractiveTransitioning? {
       return interactionController
   }
 
-  func presentationController(forPresented presented: UIViewController,
+  public func presentationController(forPresented presented: UIViewController,
                               presenting: UIViewController?,
                               source: UIViewController) -> UIPresentationController? {
     return PresentationController(presentedViewController: presented, presenting: presenting)
@@ -185,7 +185,7 @@ extension STNavigationViewController: UIViewControllerTransitioningDelegate {
 }
 
 extension STNavigationViewController: UIGestureRecognizerDelegate {
-  func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+  public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
     guard gestureRecognizer is UIScreenEdgePanGestureRecognizer else { return true }
     return viewControllers.count > 1 && !isPushingViewController
   }

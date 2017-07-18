@@ -1,8 +1,8 @@
 {
   "name": "STNavigationViewController",
-  "version": "0.1.0",
-  "summary": "A short description of STNavigationViewController.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.0.1",
+  "summary": "A UINavigationController's subclass in order to make animated transition for pushing or poping new controller.",
+  "description": "STNavigationController is a subclass of UINavigationController.\nAllow to custom animation when pushing or poping new UIViewController.\nEasy to use/create new one Animator.",
   "homepage": "https://github.com/son11592/STNavigationViewController",
   "license": {
     "type": "MIT",
@@ -13,8 +13,9 @@
   },
   "source": {
     "git": "https://github.com/son11592/STNavigationViewController.git",
-    "tag": "0.1.0"
+    "tag": "0.0.1"
   },
+  "social_media_url": "https://twitter.com/hoangson11592",
   "platforms": {
     "ios": "8.0"
   },
