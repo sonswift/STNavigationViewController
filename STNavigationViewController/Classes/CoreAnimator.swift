@@ -10,7 +10,7 @@ import UIKit
 
 open class PushAnimator: Animator {
 
-  var duration: TimeInterval = 0.23
+  open var duration: TimeInterval = 0.23
 
   override open func transitionDuration(using context: UIViewControllerContextTransitioning?) -> TimeInterval {
     return self.duration

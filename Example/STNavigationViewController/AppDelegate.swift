@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import STNavigationViewController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -13,12 +13,6 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		E70A24A51F1DB6AF008EF846 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = E70A249F1F1DB6AF008EF846 /* .gitkeep */; };
-		E70A24A61F1DB6AF008EF846 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A24A01F1DB6AF008EF846 /* Animator.swift */; };
-		E70A24A71F1DB6AF008EF846 /* CoreAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A24A11F1DB6AF008EF846 /* CoreAnimator.swift */; };
-		E70A24A81F1DB6AF008EF846 /* ParalaxAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A24A21F1DB6AF008EF846 /* ParalaxAnimator.swift */; };
-		E70A24A91F1DB6AF008EF846 /* STNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A24A31F1DB6AF008EF846 /* STNavigationViewController.swift */; };
-		E70A24AA1F1DB6AF008EF846 /* STViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A24A41F1DB6AF008EF846 /* STViewController.swift */; };
 		E7D38EF71F1CB51000A6DA7E /* ChainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D38EF61F1CB51000A6DA7E /* ChainViewController.swift */; };
 		E7D38EF91F1CB86B00A6DA7E /* HideNavigationBarAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D38EF81F1CB86B00A6DA7E /* HideNavigationBarAnimator.swift */; };
 		E7D38EFB1F1CB8C000A6DA7E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D38EFA1F1CB8C000A6DA7E /* NavigationBar.swift */; };
@@ -45,12 +39,6 @@
 		7960ACA3E5A3BF5A13F2A5FC /* Pods_STNavigationViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STNavigationViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8475A3FF7B79D0A320BED4CB /* STNavigationViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = STNavigationViewController.podspec; path = ../STNavigationViewController.podspec; sourceTree = "<group>"; };
 		CAB66C460775D135B5C56B6E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E70A249F1F1DB6AF008EF846 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		E70A24A01F1DB6AF008EF846 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		E70A24A11F1DB6AF008EF846 /* CoreAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimator.swift; sourceTree = "<group>"; };
-		E70A24A21F1DB6AF008EF846 /* ParalaxAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParalaxAnimator.swift; sourceTree = "<group>"; };
-		E70A24A31F1DB6AF008EF846 /* STNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STNavigationViewController.swift; sourceTree = "<group>"; };
-		E70A24A41F1DB6AF008EF846 /* STViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STViewController.swift; sourceTree = "<group>"; };
 		E7D38EF61F1CB51000A6DA7E /* ChainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainViewController.swift; sourceTree = "<group>"; };
 		E7D38EF81F1CB86B00A6DA7E /* HideNavigationBarAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideNavigationBarAnimator.swift; sourceTree = "<group>"; };
 		E7D38EFA1F1CB8C000A6DA7E /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -75,7 +63,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				E70A249E1F1DB6AF008EF846 /* Classes */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for STNavigationViewController */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -159,20 +146,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E70A249E1F1DB6AF008EF846 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E70A249F1F1DB6AF008EF846 /* .gitkeep */,
-				E70A24A01F1DB6AF008EF846 /* Animator.swift */,
-				E70A24A11F1DB6AF008EF846 /* CoreAnimator.swift */,
-				E70A24A21F1DB6AF008EF846 /* ParalaxAnimator.swift */,
-				E70A24A31F1DB6AF008EF846 /* STNavigationViewController.swift */,
-				E70A24A41F1DB6AF008EF846 /* STViewController.swift */,
-			);
-			name = Classes;
-			path = ../STNavigationViewController/Classes;
-			sourceTree = "<group>";
-		};
 		F4F81FF242EC9AFCEECB3674 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +221,6 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				E70A24A51F1DB6AF008EF846 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,18 +280,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D38EFD1F1CBE8E00A6DA7E /* HideNavigationViewController.swift in Sources */,
-				E70A24A81F1DB6AF008EF846 /* ParalaxAnimator.swift in Sources */,
 				E7D38EF71F1CB51000A6DA7E /* ChainViewController.swift in Sources */,
 				E7D38EFB1F1CB8C000A6DA7E /* NavigationBar.swift in Sources */,
 				E7D38F031F1CD15800A6DA7E /* ParallaxViewController.swift in Sources */,
 				E7D38EF91F1CB86B00A6DA7E /* HideNavigationBarAnimator.swift in Sources */,
-				E70A24A91F1DB6AF008EF846 /* STNavigationViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				E70A24A61F1DB6AF008EF846 /* Animator.swift in Sources */,
-				E70A24AA1F1DB6AF008EF846 /* STViewController.swift in Sources */,
 				E7D38EFF1F1CC09B00A6DA7E /* NormalViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				E70A24A71F1DB6AF008EF846 /* CoreAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

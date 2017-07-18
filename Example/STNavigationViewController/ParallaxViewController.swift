@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import STNavigationViewController
 
 class ParallaxViewController: ViewController {
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import STNavigationViewController
 
 class ViewController: STViewController {
 
