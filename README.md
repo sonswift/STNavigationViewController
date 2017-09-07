@@ -6,17 +6,23 @@
 [![Platform](https://img.shields.io/cocoapods/p/STNavigationViewController.svg?style=flat)](http://cocoapods.org/pods/STNavigationViewController)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/sonacle/0.99)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Feature
 
 - [x] Parallax Push/Pop animator.
 - [x] Chaining Push/Pop animator (PushAnimator/PopAnimator).
 - [x] Allow custom Push/Pop/PopInteraction Animator.
+- [x] Support Edge Pan Gesture & Full Screen Pan Gesture to Pop Interaction.
 - [x] Custom duration of animation.
 - [ ] Support Push Interaction Animator.
+
+
+![alt text](https://github.com/son11592/STNavigationViewController/blob/master/STNavigationViewController.gif)
+
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 
 ## Installation
