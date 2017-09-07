@@ -96,19 +96,19 @@ class NormalViewController: ViewController {
     self.contentView.addSubview(self.navigation)
   }
 
-  public func pushChainViewController() {
+  @objc public func pushChainViewController() {
     self.buttonTag = self.normalBtn.tag
     let controller = ChainViewController()
     self.navigationController?.pushViewController(controller, animated: true)
   }
 
-  public func pushHideNavigationViewController() {
+  @objc public func pushHideNavigationViewController() {
     self.buttonTag = self.chainBtn.tag
     let controller = HideNavigationViewController()
     self.navigationController?.pushViewController(controller, animated: true)
   }
 
-  public func pushParallaxViewController() {
+  @objc public func pushParallaxViewController() {
     self.buttonTag = self.parallaxBtn.tag
     let controller = ParallaxViewController()
     self.navigationController?.pushViewController(controller, animated: true)

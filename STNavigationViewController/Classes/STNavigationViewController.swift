@@ -69,7 +69,7 @@ open class STNavigationViewController: UINavigationController {
 
   fileprivate var interactionController: UIPercentDrivenInteractiveTransition?
 
-  public func handleSwipeFromLeft(_ gesture: UIScreenEdgePanGestureRecognizer) {
+  @objc public func handleSwipeFromLeft(_ gesture: UIScreenEdgePanGestureRecognizer) {
     let percent = gesture.translation(in: gesture.view!).x / gesture.view!.bounds.size.width
 
     if gesture.state == .began {
@@ -98,7 +98,7 @@ open class STNavigationViewController: UINavigationController {
     }
   }
 
-  public func handleSwipeFromRight(_ gesture: UIScreenEdgePanGestureRecognizer) {
+  @objc public func handleSwipeFromRight(_ gesture: UIScreenEdgePanGestureRecognizer) {
     let percent = -gesture.translation(in: gesture.view!).x / gesture.view!.bounds.size.width
 
     if gesture.state == .began {

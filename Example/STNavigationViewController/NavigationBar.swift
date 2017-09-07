@@ -60,7 +60,7 @@ class NavigationBar: UIView {
     self.titleLb.text = title
   }
 
-  public func popViewController() {
+  @objc public func popViewController() {
     (UIApplication.shared.delegate?.window!?.rootViewController as? UINavigationController)?.popViewController(animated: true)
   }
 
