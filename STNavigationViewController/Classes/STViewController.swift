@@ -18,7 +18,7 @@ public protocol ViewControllerAnimatedTransitioningProtocol {
   func pushInteractionController()
 }
 
-open class STViewController: UIViewController {
+open class STViewController: UIViewController, ViewControllerAnimatedTransitioningProtocol {
 
   open let contentView = UIView()
 
@@ -54,9 +54,7 @@ open class STViewController: UIViewController {
     self.view.backgroundColor = UIColor.white
     self.view.addSubview(self.contentView)
   }
-}
 
-extension STViewController: ViewControllerAnimatedTransitioningProtocol {
   open func getPushAnimatedTransitioning(from fromVC: UIViewController,
                                          to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning {
     return PushAnimator()
