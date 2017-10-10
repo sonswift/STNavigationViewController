@@ -41,18 +41,22 @@ open class STViewController: UIViewController, ViewControllerAnimatedTransitioni
 
   override open func loadView() {
     super.loadView()
+    self.contentView.frame = self.view.bounds
+    self.contentView.backgroundColor = UIColor.white
+    self.automaticallyAdjustsScrollViewInsets = false
+    self.view.backgroundColor = UIColor.white
+    self.view.addSubview(self.contentView)
   }
 
   override open func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
   }
 
+  open override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+
   open func commonInit() {
-    self.automaticallyAdjustsScrollViewInsets = false
-    self.contentView.frame = self.view.bounds
-    self.contentView.backgroundColor = UIColor.white
-    self.view.backgroundColor = UIColor.white
-    self.view.addSubview(self.contentView)
   }
 
   open func getPushAnimatedTransitioning(from fromVC: UIViewController,
