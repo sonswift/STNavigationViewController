@@ -17,8 +17,8 @@ open class STNavigationViewController: UINavigationController {
   open var isPushInteractionEnabled = false
 
   // MARK: - Private properties
-  fileprivate var isPushingViewController = false
-  private var leftGesture: UIPanGestureRecognizer?
+  open var isPushingViewController = false
+  open var leftGesture: UIPanGestureRecognizer?
 
   // MARK: - Initiation
   required public init?(coder aDecoder: NSCoder) {
