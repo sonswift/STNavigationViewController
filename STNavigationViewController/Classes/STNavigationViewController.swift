@@ -122,7 +122,7 @@ open class STNavigationViewController: UINavigationController {
     }
   }
 
-  public func lockLeftInteractionGesture(_ isLocked: Bool) {
+  open func lockLeftInteractionGesture(_ isLocked: Bool) {
     self.leftGesture?.isEnabled = !isLocked
   }
 }
