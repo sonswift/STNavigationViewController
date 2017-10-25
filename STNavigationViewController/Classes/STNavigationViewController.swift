@@ -41,7 +41,17 @@ open class STNavigationViewController: UINavigationController {
 
   override open func viewDidLoad() {
     super.viewDidLoad()
+    self.attachGestures()
+  }
 
+  open func commonInit() {
+    self.delegate = self
+    self.transitioningDelegate = self
+    self.navigationBar.isHidden = true
+    self.interactivePopGestureRecognizer?.isEnabled = false
+  }
+
+  open func attachGestures() {
     let left = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeFromLeft(_:)))
     left.delegate = self
     left.cancelsTouchesInView = false
@@ -58,13 +68,6 @@ open class STNavigationViewController: UINavigationController {
       right.delaysTouchesEnded = false
       self.view.addGestureRecognizer(right)
     }
-  }
-
-  open func commonInit() {
-    self.delegate = self
-    self.transitioningDelegate = self
-    self.navigationBar.isHidden = true
-    self.interactivePopGestureRecognizer?.isEnabled = false
   }
 
   fileprivate var interactionController: UIPercentDrivenInteractiveTransition?
